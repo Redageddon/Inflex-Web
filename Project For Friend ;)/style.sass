@@ -1,0 +1,182 @@
+$red: #FF1111
+
+
+*
+   scroll-behavior: smooth
+
+*::selection
+   background-color: #6669
+   text-shadow: 0px 0px 2px black
+
+@font-face
+    font-family: 'Jersey Sharp'
+    src: url("FONT/Jersey Sharp.ttf")
+
+@font-face
+    font-family: 'Roboto'
+    src: url("FONT/Roboto/Roboto-Medium.ttf")
+    font-weight: normal
+
+body, html
+    background-color: #121212
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    font-family: 'Jersey Sharp'
+    color: white
+    font-size: 15pt
+    padding: 0
+    margin: 0
+
+#container
+   position: absolute
+   top: 50px
+   left: 0
+   right: 0
+   bottom: 0
+   box-sizing: border-box
+   overflow-y: scroll
+   font-family: Roboto
+   font-size: 13pt
+   text-align: justify
+
+#alert
+   position: absolute
+   top: 50%
+   left: 50%
+   transform: translate(-50%, -50%)
+   width: 400px
+   height: 300px
+   border: 2px white solid
+   transition: .4s
+   opacity: 0
+   display: none
+
+   #close
+      position: absolute
+      top: 0
+      right: 0
+      width: 40px
+      height: 40px
+      text-align: center
+      line-height: 40px
+      cursor: pointer
+      background-color: #181818
+      user-select: none
+
+      &:hover
+         background-color: #333
+
+   #alert_title
+      background-color: $red
+      height: 40px
+      line-height: 40px
+      box-sizing: border-box
+      padding-left: 10px
+      user-select: none
+
+   #alert_message
+      overflow-y: scroll
+      box-sizing: border-box
+      font-family: Roboto
+      padding: 6px
+      font-size: 11pt
+      height: 220px
+      text-align: justify
+
+   #alert_buttons
+      height: 40px
+      background-color: #333
+      position: relative
+
+      input
+         display: block
+         border: none
+         background-color: $red
+         height: 40px
+         width: 50%
+         cursor: pointer
+         font-size: 13pt
+         position: absolute
+         color: white
+         font-weight: bold
+
+         &:hover
+            font-weight: normal
+
+footer
+   background-color: black
+   display: block
+   width: 100%
+   height: 300px
+   box-sizing: border-box
+   padding: 10px
+   position: relative
+
+   #left_footer_side
+      width: 50%
+      box-sizing: border-box
+      height: calc(100% - 60px)
+      padding: 5px
+      position: absolute
+
+   #right_footer_side
+      width: 50%
+      height: calc(100% - 40px)
+      position: absolute
+      right: 0
+      box-sizing: border-box
+      border-left: 2px solid white
+      padding: 5px
+
+#footer_before
+   display: block
+   background-color: black
+   height: 70px
+   clip-path: polygon(27% 67%, 70% 0, 100% 92%, 100% 100%, 0 100%, 0 0)
+   margin-top: 20px
+   box-shadow: -10px -10px 0px red
+   z-index: 50
+
+#footer_before_parent
+   filter: drop-shadow(0px -5px 0px $red)
+
+#menu
+   position: absolute
+   top: 0
+   left: 0
+   right: 0
+   height: 50px
+   background-color: $red
+   box-shadow: 0px 0px 10px black
+   overflow: hidden
+   border-bottom: 2px solid darken($red, 20%)
+
+   #menu_container
+      margin: 0 auto
+      width: 1000px
+
+   .menuItem, img
+      width: 200px
+      height: 100%
+      border-right: 1px dashed darken($red, 20%)
+      float: left
+      display: block
+      line-height: 50px
+      text-align: center
+      text-shadow: 0px 0px 4px black
+      user-select: none
+      cursor: pointer
+      transition: .2s
+      box-sizing: border-box
+
+      &.active
+         background-color: black
+
+         &:hover
+            background-color: #222 !important
+
+      &:hover
+         background-color: darken($red, 10%)
