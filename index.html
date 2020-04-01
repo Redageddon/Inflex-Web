@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<title>Inflex</title>
-		<link rel="icon" type="image/png" href="IMG/icon.png" />
+		<link rel="icon" href="IMG/icon.png" />
     	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta charset="UTF-8" />
 		<meta name="theme-color" content="#000000" />
@@ -38,11 +38,18 @@
         <div id="menu">
 			  <div id="menu_container">
 				  <div class="menuItem active" style="border-left: 1px dashed #CC0000">Inflex</div>
-				  <div class="menuItem">Levels</div>
+				  <div class="menuItem" onclick="window.location = 'levels.html'">Levels</div>
 				  <img src="IMG/logo.png" />
-				  <div class="menuItem">Development</div>
-				  <div class="menuItem">Contact</div>
+				  <div class="menuItem" onclick="window.location = 'development.html'">Development</div>
+				  <div class="menuItem" onclick="window.location = 'contact.html'">Contact</div>
+				  <div id="hamburger" onclick="hamburger.commit()"></div>
 			  </div>
+		  </div>
+		  <div id="menu_mobile">
+			  <div class="menuMobileItem active" style="border-left: 1px dashed #CC0000">Inflex</div>
+			  <div class="menuMobileItem" onclick="window.location = 'levels.html'">Levels</div>
+			  <div class="menuMobileItem" onclick="window.location = 'development.html'">Development</div>
+			  <div class="menuMobileItem" onclick="window.location = 'contact.html'">Contact</div>
 		  </div>
     </body>
 </html>

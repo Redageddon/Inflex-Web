@@ -26,3 +26,13 @@ var custom_alert = {
       document.getElementById("alert").style.display = "block";
    }
 };
+
+var hamburger = {
+   commit: function() {
+      if(document.getElementById("menu_mobile").style.transform == "scaleY(0)") {
+         document.getElementById("menu_mobile").style.transform = "scaleY(1)";
+      } else {
+         document.getElementById("menu_mobile").style.transform = "scaleY(0)";
+      }
+   }
+};
